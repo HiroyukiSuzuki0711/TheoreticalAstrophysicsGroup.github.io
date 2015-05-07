@@ -35,19 +35,13 @@
         <a href="{{ lel.access }}" class="social-icon soc-access animated fadeInDown animation-delay-2"><i class="fa fa-location-arrow"></i></a>
         <a href="{{ lel.ccs }}" class="social-icon soc-ccs animated fadeInDown animation-delay-3"><img src="{{ site.baseurl }}{{ la.img }}/ccs-w-s.png"></img></a>
         <a href="{{ lel.uot }}" class="social-icon soc-uot animated fadeInDown animation-delay-4"><img src="{{ site.baseurl }}{{ la.img }}/uot-w-s.png"></img></a>
-        <a href="{{ site.baseurl }}{{ page.url | replace_first: '/en/','/ja/' | remove: 'index.html' }}" class="social-icon soc-lang-sel animated fadeInDown animation-delay-5 {% if page.lang == 'ja' %} active {% endif %}"><sub>{{ thl.ja }}</sub></a>
-        <a href="{{ site.baseurl }}{{ page.url | replace_first: l1,l2 | remove: 'index.html'}}" class="social-icon soc-language animated fadeInDown animation-delay-6"><i class="fa fa-language"></i></a>
-        <a href="{{ site.baseurl }}{{ page.url | replace_first: '/ja/','/en/' | remove: 'index.html'}}" class="social-icon soc-lang-sel animated fadeInDown animation-delay-7 {% if page.lang == 'en' %} active {% endif %}"><sub>{{ thl.en }}</sub></a>
-      </div>
-
-      <div id="search-header" class="{{ hl }} animated fadeInRight">
-        <div class="input-group">
-
-          <input type="text" class="form-control" placeholder="{{ thl.search }}">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-          </span>
-        </div><!-- /input-group -->
+        <a href="{{ site.baseurl }}{{ li.search }}/{{ page.lang }}" class="social-icon animated fadeInDown animation-delay-5"><i class="fa fa-search"></i></a>
+        <br/><br/>
+        <a class="social-icon soc-blank animated fadeInDown animation-delay-1"></a>
+        <a class="social-icon soc-blank animated fadeInDown animation-delay-2"></a>
+        <a href="{{ site.baseurl }}{{ page.url | replace_first: '/en/','/ja/' | remove: 'index.html' }}" class="social-icon soc-lang-sel animated fadeInDown animation-delay-3 {% if page.lang == 'ja' %} active {% endif %}"><sub>{{ thl.ja }}</sub></a>
+        <a href="{{ site.baseurl }}{{ page.url | replace_first: l1,l2 | remove: 'index.html'}}" class="social-icon soc-language animated fadeInDown animation-delay-4"><i class="fa fa-language"></i></a>
+        <a href="{{ site.baseurl }}{{ page.url | replace_first: '/ja/','/en/' | remove: 'index.html'}}" class="social-icon soc-lang-sel animated fadeInDown animation-delay-5 {% if page.lang == 'en' %} active {% endif %}"><sub>{{ thl.en }}</sub></a>
       </div>
 
     </div> <!-- container -->
@@ -110,9 +104,10 @@
           <ul class="nav navbar-nav navbar-right {{ hs }}">
             {% assign pu_array = page.url | split: '/' %}
             {% assign pu = pu_array[1] %}
-            <li class="dropdown"> <a href="{{ site.baseurl }}{{ page.url | replace_first: l1,l2 | remove: 'index.html'}}"><i class="fa fa-language"></i> 　{{ thl.readin }}</a></li>
             <li class="dropdown {% if pu == 'contact' %} active {% endif %}"> <a href="{{ site.baseurl }}{{ li.contact }}/{{ page.lang }}"><i class="fa fa-envelope"></i>　{{ thl.contact }}</a> </li>
             <li class="dropdown "> <a href="{{ lel.access }}" target="_blank"><i class="fa fa-location-arrow"></i> 　{{ thl.access }} <sup><i class="fa fa-external-link"></i></sup></a> </li>
+            <li class="dropdown"> <a href="{{ site.baseurl }}{{ page.url | replace_first: l1,l2 | remove: 'index.html'}}"><i class="fa fa-language"></i> 　{{ thl.readin }}</a></li>
+            <li class="dropdown {% if pu == 'search' %} active {% endif %}"> <a href="{{ li.search }}/{{ page.lang }}" target="_blank"><i class="fa fa-search"></i> 　{{ thl.search }}</a></li>
           </ul> <!-- nav nabvar-nav navbar-right -->
 
       </div><!-- navbar-collapse -->

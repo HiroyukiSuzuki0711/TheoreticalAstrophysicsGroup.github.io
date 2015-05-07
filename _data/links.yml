@@ -64,6 +64,7 @@ internal:
   admission: &admission /admission
   astro_internal: &astro_internal /astro_internal # previously Astro-Internal
   alumni: &alumni /alumni
+  search: &search /search
 
 
 # Internal links (resources)
@@ -73,7 +74,6 @@ assets:
   js: /assets/js
   fonts: /assets/fonts
   doc: /assets/doc
-  tipuesearch: /assets/tipuesearch
 
 
 # Nav links

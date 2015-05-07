@@ -1238,6 +1238,12 @@ a.social-icon:hover {
 .soc-github {
   background-color: #000;
 }
+.soc-blank {
+  border: solid 0px #576890;
+  opacity: 0.0;
+  filter: alpha(opacity=0);
+}
+
 /*-------------------------------------------------------------------*/
 /* Navbar */
 /*-------------------------------------------------------------------*/

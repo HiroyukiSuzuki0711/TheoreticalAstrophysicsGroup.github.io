@@ -12,6 +12,14 @@ description: "Theoretical Astrophysics Group, Center for Computational Sciences,
 
 timezone: Asia/Tokyo
 
+# gems
+gems: ['jekyll-lunr-js-search']
+
+# lunr js search
+lunr_search:
+  excludes: [rss.xml, atom.xml, assets]
+  js_dir: "/assets/js"
+
 # Build settings
 markdown: kramdown
 permalink: pretty

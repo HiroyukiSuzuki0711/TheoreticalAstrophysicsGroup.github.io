@@ -1,11 +1,17 @@
-<!-- AYW 2014-06-21 19:51 JST
-No clue how to implement search in Jekyll yet. Will have to use a plugin, I think -->
+<!-- AYW 2014-06-21 19:51 JST -->
 <div class="block">
   <div class="input-group">
-    <input type="text" placeholder="Search..." class="form-control">
-    <span class="input-group-btn">
-      <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
-    </span>
+
+  <!-- lunr js search (https://github.com/slashdotdash/jekyll-lunr-js-search) -->
+  <div id="search">
+    <form action="{{ site.baseurl }}{{ li.search }}/{{ page.lang }}/" method="get">
+      <input type="text" class="form-control" id="search-query" name="q" placeholder="{{ thl.search }}" autocomplete="off">
+      <!-- <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+      </span>-->
+    </form>
+  </div>
+
   </div><!-- /input-group -->
 </div>
 

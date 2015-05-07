@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% assign li = site.data.links.internal %}
+{% include page_header.html title=page.title %}
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-4">
+
+      {% include aside_search.html %}
+
+    </div> <!-- col -->
+
+ 
+    <div class="col-md-8">
+
+      {{ content }}
+
+      <!-- lunr js search (https://github.com/slashdotdash/jekyll-lunr-js-search) -->
+      <section id="search-results" style="display: none;">
+        <p>Search results</p>
+        <div class="entries">
+        </div>
+      </section>
+
+    </div> <!-- col-md-12 -->
+
+  </div> <!-- row -->
+</div> <!-- container  -->
+
